@@ -4,19 +4,6 @@ def readfile(filename):
     data_array = [float(i.rstrip('\n')) for i in fd]
     return data_array
 
-def max1(data_array):
-    temp = data_array[0]
-    for i in data_array:
-        if i > temp:
-            temp = i
-    return temp
-
-def min1(data_array):
-    temp = data_array[0]
-    for i in data_array:
-        if i < temp:
-            temp = i
-    return temp
 
 def frequency_count(data_array,interval_list):
     #this function will accept two arguments (two dimensional array of intervals and data array) and 
