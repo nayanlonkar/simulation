@@ -63,4 +63,4 @@ def normal_trend(filename):
     chiSquare_value = sum(chiSquare_array)
     print(chiSquare_value)            
             
-normal_trend('diff_data.txt')
+normal_trend('normal.txt')
