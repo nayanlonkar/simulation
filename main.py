@@ -4,7 +4,6 @@ def readfile(filename):
     data_array = [float(i.rstrip('\n')) for i in fd]
     return data_array
 
-
 def frequency_count(data_array,interval_list):
     #this function will accept two arguments (two dimensional array of intervals and data array) and 
     #will return the array containing the frequency of each interval
