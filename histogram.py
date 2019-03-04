@@ -14,6 +14,7 @@ def histogram():
         range_array.append(temp)
 
     plt.hist(data_array, range_array)
+    plt.title(filename)
     plt.show()
 
 histogram()
