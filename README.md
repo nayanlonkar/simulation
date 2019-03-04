@@ -1,2 +1,2 @@
-# simulation
 
+1) Normal Distribution
