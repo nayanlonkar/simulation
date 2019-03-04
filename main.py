@@ -16,3 +16,6 @@ def frequency_count(data_array,interval_list):
         frequency_list.append(count)
     return frequency_list
 
+def mean(data_array):
+    mean = sum(data_array)/len(data_array)
+    return mean
