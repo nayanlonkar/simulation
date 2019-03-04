@@ -31,13 +31,36 @@ def normal_trend(filename):
     #for upper and lower limits to be infinity
     temp_list[0] = temp_list[0] - 100
     temp_list[len(temp_list)-1] = temp_list[len(temp_list)-1] + 100
+    #interval list creation
+    interval_list = [[temp_list[i], temp_list[i+1]] for i in range(len(temp_list)-1)]
+    #actual frequency list
+    frequency_list = frequency_count(data_array, interval_list)
 
+    #expected frequency calculation
+    expected_prob = []
+    for i in interval_list:
+        a = i[0]
+        b = i[1]
+        n = 100         #no of intervals
+        h = (b - a)/n
+        sum1 = 0
+        for j in range(1,n-1):
+            sum2 = normal_distribution(mean, variance, (a+j*h))
+            sum1 += sum2
+        sum1 = sum1 * 2
+        sum1 = sum1 + normal_distribution(mean,variance,a) + normal_distribution(mean,variance,b)
+        sum1 = sum1 * (h/2)
+        expected_prob.append(sum1) 
+    #to calculate expected frequency multiply expected probability by sample size
+    expected_frequency = [len(data_array) * i for i in expected_prob]  
 
-
-    print(mean)
-    print(variance)
-    print(normal_distribution(mean,variance,data_array[0]))
-
+    #chiSquare test
+    chiSquare_array = []
+    for i in range(len(frequency_list)):
+        temp = (frequency_list[i] - expected_frequency[i]) ** 2
+        temp = temp / expected_frequency[i]
+        chiSquare_array.append(temp)
+    chiSquare_value = sum(chiSquare_array)
+    print(chiSquare_value)            
+            
 normal_trend('diff_data.txt')
-
-
