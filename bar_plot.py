@@ -29,6 +29,7 @@ def bar_plot():
     freq_array = frequency_count(data_array, range_array)
     temp_array = [i for i in range(1,noOfIntervals+1)]
     plt.bar(temp_array, freq_array)
+    plt.title(filename)
     plt.show()
 
 bar_plot()
