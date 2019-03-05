@@ -6,5 +6,7 @@ This folder contains :
         3) Histogram
 
     Distributions >
-        1) Normal distribution
-        2) Log-Normal distribution
+        1) Uniform distribution
+        2) Exponential distribution
+        3) Normal distribution
+        4) Log-Normal distribution
