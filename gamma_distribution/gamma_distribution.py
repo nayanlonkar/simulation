@@ -16,7 +16,7 @@ def oneByM(data_array):
     log_data_array = [math.log(i) for i in data_array]
     temp2  = sum(log_data_array)/len(log_data_array)
     temp3 = temp1 - temp2 
-    return temp3
+    return 1/temp3
 
 #probability density function of gamma function
 def gamma_pdf(theta, beta, x_val):
@@ -27,11 +27,10 @@ def gamma_pdf(theta, beta, x_val):
 
 def gamma_distribution(filename):
     data_array = readfile(filename)
-    #data_array = [1,2,3,4,5,6,7,8,9,10]
+    #data_array = [70.292,10.107,48.386,20.480,13.053,25.292,14.713,39.166,17.421,13.905,30.215,17.137,44.024,10.552,37.298,16.314,28.073,39.019,32.330,36.547]
     noOfIntervals = 15
     intervalSize = (max(data_array) - min(data_array))/noOfIntervals  
     theta = theta_funct(data_array)
-    print(f"mean is : {mean_funct(data_array)}")
     print(f"theta is : {theta} ")
     print(f"1/M value is : {oneByM(data_array)} ")
     beta = float(input("Enter the beta parameter from table A.9 based on 1/M value : "))
