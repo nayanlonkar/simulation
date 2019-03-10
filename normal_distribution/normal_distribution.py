@@ -53,7 +53,7 @@ def normal_trend(filename):
         expected_prob.append(sum1) 
     #to calculate expected frequency multiply expected probability by sample size
     expected_frequency = [len(data_array) * i for i in expected_prob]  
-
+    
     #chiSquare test
     chiSquare_array = []
     for i in range(len(frequency_list)):
@@ -61,6 +61,6 @@ def normal_trend(filename):
         temp = temp / expected_frequency[i]
         chiSquare_array.append(temp)
     chiSquare_value = sum(chiSquare_array)
-    print(chiSquare_value)            
+    print(f"chiSquare value is :{chiSquare_value}")            
             
 normal_trend('normal.txt')
