@@ -10,3 +10,4 @@ This folder contains :
         2) Exponential distribution
         3) Normal distribution
         4) Log-Normal distribution
+        5) Gamma distribution
