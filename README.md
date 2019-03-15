@@ -11,3 +11,4 @@ This folder contains :
         3) Normal distribution
         4) Log-Normal distribution
         5) Gamma distribution
+        6) Weibull distribution
