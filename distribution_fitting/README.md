@@ -12,3 +12,5 @@ This folder contains :
         4) Log-Normal distribution
         5) Gamma distribution
         6) Weibull distribution
+        7) Pearson Type 5
+        8) Pearson Type 6
