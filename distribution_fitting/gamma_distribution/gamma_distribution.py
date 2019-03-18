@@ -31,7 +31,7 @@ def gamma_distribution(filename):
     noOfIntervals = 15
     intervalSize = (max(data_array) - min(data_array))/noOfIntervals  
     theta = theta_funct(data_array)
-    print(f"theta is : {theta} ")
+    print(f"theta is : {theta}")
     print(f"1/M value is : {oneByM(data_array)} ")
     beta = float(input("Enter the beta parameter from table A.9 based on 1/M value : "))
 
