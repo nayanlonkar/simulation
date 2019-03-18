@@ -55,19 +55,24 @@ def beta_estimation(data_array):
     mean = mean_funct(data_array)
     variance = variance_funct(data_array)
     beta = mean/math.sqrt(variance)
-    print(variance)
-    print(math.sqrt(variance))
-    print(beta,funct1(beta,data_array))
     while(funct1(beta, data_array) > 0.001):
         beta = beta - (funct1(beta, data_array)/funct2(beta, data_array))
-        print(beta, funct1(beta, data_array))
 
     return beta
 
+#this function will return value of alpha
+def alpha_estimation(data_array):
+    beta = beta_estimation(data_array)
+    n = len(data_array)
+    beta_data_array = [i ** beta for i in data_array]
+    alpha = (1/n) * sum(beta_data_array)
+    alpha = alpha ** (1/beta)
+    return alpha 
 
-data_array = list(range(1,11))
+#data_array = list(range(1,11))
 #data_array = [70.292, 10.107, 48.386, 20.480, 13.053, 25.292, 14.713, 39.166, 17.421, 13.905, 30.215, 17.137, 44.024, 10.552, 37.298, 16.314, 28.073, 39.019, 32.330, 36.547]
+data_array = readfile('data2.txt')
 beta = beta_estimation(data_array)
+alpha = alpha_estimation(data_array)
 print(beta)
-sq_data_array = [i**2 for i in data_array]
-print(sum(sq_data_array))
+print(alpha)
