@@ -5,8 +5,8 @@ a1.csv -> Uniform distribution
 a2.csv -> Exponential distribution
 a3.csv -> Gamma distribution
 a4.csv -> Weibull distribution
-a5.csv
-a6.csv
+a5.csv -> Normal distribution
+a6.csv -> 
 a7.csv
-a9.csv
+a8.csv
 
