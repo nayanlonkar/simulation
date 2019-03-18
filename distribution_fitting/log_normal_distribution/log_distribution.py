@@ -19,7 +19,8 @@ def log_normal(mu,sd,x_val):
     return temp3
 
 def log_trend():
-    data_array = readfile('log_normal.txt')
+    #data_array = readfile('log_normal.txt')
+    data_array = readfile('a8.csv')
     noIntervals = 15
     intervalSize = (max(data_array) - min(data_array))/noIntervals
     temp_list = [min(data_array)]
