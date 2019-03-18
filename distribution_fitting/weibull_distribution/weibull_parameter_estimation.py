@@ -69,10 +69,3 @@ def alpha_estimation(data_array):
     alpha = alpha ** (1/beta)
     return alpha 
 
-#data_array = list(range(1,11))
-#data_array = [70.292, 10.107, 48.386, 20.480, 13.053, 25.292, 14.713, 39.166, 17.421, 13.905, 30.215, 17.137, 44.024, 10.552, 37.298, 16.314, 28.073, 39.019, 32.330, 36.547]
-data_array = readfile('data2.txt')
-beta = beta_estimation(data_array)
-alpha = alpha_estimation(data_array)
-print(beta)
-print(alpha)
