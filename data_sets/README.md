@@ -7,6 +7,6 @@ a3.csv -> Gamma distribution
 a4.csv -> Weibull distribution
 a5.csv -> Normal distribution
 a6.csv -> 
-a7.csv
+a7.csv -> Triangular distribution
 a8.csv
 
